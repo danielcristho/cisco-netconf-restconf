@@ -11,7 +11,7 @@
 # username admin passpharase lifetime 9999 warntime 14 gracetime 3
 # ip domain-name ...
 # ssh key rsa 2048
-# feature shh
+# feature ssh
 # exit
 ```
 

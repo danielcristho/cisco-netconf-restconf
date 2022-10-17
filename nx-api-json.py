@@ -1,5 +1,6 @@
-import requests
 import json
+
+import requests
 
 url = 'http://172.16.0.2/ins'
 username='admin'
@@ -15,7 +16,7 @@ payload=[
             "cmd": "interface ethernet 2/2",
             "version": 1.2
         },
-        "id": 2
+        "id": 1
     },
     
     {    
@@ -25,7 +26,7 @@ payload=[
             "cmd": "description foo-bar",
             "version": 1.2
         },
-        "id": 3
+        "id": 2
     },
     
     {    
@@ -35,7 +36,7 @@ payload=[
             "cmd": "end",
             "version": 1.2
         },
-        "id": 4
+        "id": 3
     },
     
     {    
@@ -45,27 +46,8 @@ payload=[
             "cmd": "copy run start",
             "version": 1.2
         },
-        "id": 5
+        "id": 4
     },
     
-    {    
-        "jsonrpc": "2.0",
-        "method": "cli",
-        "params": {
-            "cmd": "vlan 10",
-            "version": 1.2
-        },
-        "id": 6
-    },
-    
-    {    
-        "jsonrpc": "2.0",
-        "method": "cli",
-        "params": {
-            "cmd": "name office",
-            "version": 1.2
-        },
-        "id": 7
-    },
 ]
 response = requests.post(url,data=json.dumps(payload), headers=myheaders, auth=(username, password)).json()

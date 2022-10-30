@@ -8,7 +8,9 @@ port = 830
 
 yang_file = "yang-interfaces.xml"
 
-conn = manager.connect(host=host, port=port, username=username, password=password, hostkey_verify=False, device_params={'name': 'default'}, allow_agent=False, look_for_keys=False)
+conn = manager.connect(host=host, port=port,
+                    username=username, password=password, 
+                    hostkey_verify=False, device_params={'name': 'default'}, allow_agent=False, look_for_keys=False)
 
 with open(yang_file) as f: 
     output = (conn.get_config('running', f.read()))

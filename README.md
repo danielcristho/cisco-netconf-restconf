@@ -1,4 +1,4 @@
-# NETCONF Nexus using Python
+# NETCONF to Cisco device using Python
 
 ## Set Nexus SSH
 

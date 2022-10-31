@@ -1,4 +1,4 @@
-# NETCONF to Cisco device using Python
+# Config Cisco device using Netconf&Restconf
 
 ## Set Nexus SSH
 
@@ -15,7 +15,7 @@
 # exit
 ```
 
-## Config NX-API
+## Enable NX-API
 
 ```bash
 # feature nxapi

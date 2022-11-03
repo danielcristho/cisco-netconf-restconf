@@ -9,20 +9,15 @@ conn = manager.connect(host=host, port=port,
                     username=username, password=password, 
                     hostkey_verify=False, device_params={'name': 'csr'}, allow_agent=False, look_for_keys=False)
 
-FILTER = """
-<filter
+CONFIGURATION = """
+<config
 	xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
 	<native
 		xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-native">
-		<hostname></hostname> <!--get hostname-->
-		<!--get interface information-->
-		<interface>
-			<GigabitEthernet>
-				<name>2</name>
-			</GigabitEthernet>
-		</interface>
+		<hostname>router1</hostname>
 	</native>
-</filter>"""
+</config>"""
 
-print (conn.get_config('running', FILTER))
+RUN = (conn.edit_config(CONFIGURATION, target = 'running', ))
+print(RUN)
 conn.close_session()

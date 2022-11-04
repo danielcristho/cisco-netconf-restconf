@@ -33,6 +33,6 @@ CONFIGURATION = """
 </interfaces>
 </config>"""
 
-DATA = conn.edit_config(CONFIGURATION,  target = 'running')
-print (DATA)
+RUN = conn.edit_config(CONFIGURATION,  target = 'running')
+print (RUN)
 conn.close_session()

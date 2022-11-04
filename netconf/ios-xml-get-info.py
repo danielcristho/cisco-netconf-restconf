@@ -1,4 +1,6 @@
 from ncclient import manager
+import xml.dom.minidom
+
 
 host = "sandbox-iosxe-latest-1.cisco.com"
 username = "developer"
